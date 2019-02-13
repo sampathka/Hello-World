@@ -1,4 +1,5 @@
 node {
+   properties([parameters([choice(choices: ['master', 'dev', 'qa', 'staging'], description: 'Choose branch to build and deploy', name: 'gitBranch')]), pipelineTriggers([pollSCM('')])])
    def mvnHome
    stage('Code-Checkout') { // for display purposes
       //Checkout code from a GitHub repository
