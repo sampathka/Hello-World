@@ -16,10 +16,7 @@ node {
          bat(/"${mvnHome}\bin\mvn" -Dmaven.test.failure.ignore clean package/)
       }
    }
-    stage('archiveArtifacts') {
-      
-      archive 'target/*.war'
-   }
+   
    stage ('artifact-deployp-to-tc-instance'){
    echo 'deployment started'
        bat '''copy C:\\Users\\prasanth.pamula\\.jenkins\\workspace\\hello-world\\target\\*.war C:\\Users\\prasanth.pamula\\Downloads\\apache-tomcat-8.5.38\\webapps\\'''
