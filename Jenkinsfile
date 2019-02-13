@@ -17,9 +17,9 @@ node {
       }
    }
    
-   stage ('artifact-deployp-to-tc-instance'){
+   stage ('artifact-deploy-to-tc-instance'){
    echo 'deployment started'
-       bat label: '', script: 'copy C:\\Users\\prasanth.pamula\\.jenkins\\workspace\\hello-world\\target\\*.war C:\\Users\\prasanth.pamula\\Downloads\\apache-tomcat-8.5.38\\webapps\\'
+       bat '''copy C:\\Users\\prasanth.pamula\\.jenkins\\workspace\\hello-world\\target\\*.war C:\\Users\\prasanth.pamula\\Downloads\\apache-tomcat-8.5.38\\webapps\\'''
    }
 }
 
