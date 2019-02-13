@@ -16,7 +16,7 @@ node {
          bat(/"${mvnHome}\bin\mvn" -Dmaven.test.failure.ignore clean package/)
       }
    }
-    stage('artifact') {
+    stage('archiveArtifacts') {
       
       archive 'target/*.war'
    }
