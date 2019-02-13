@@ -19,7 +19,7 @@ node {
    
    stage ('artifact-deploy-to-tc-instance'){
    echo 'deployment started'
-      bat '''copy ${JENKINS_HOME}\\workspace\\hello-world\\target\\spring3-mvc-maven-xml-hello-world-1.2.war C:\\Users\\prasanth.pamula\\Downloads\\apache-tomcat-8.5.38\\webapps\\'''
+      bat '''Xcopy ${JENKINS_HOME}\\workspace\\hello-world\\target\\spring3-mvc-maven-xml-hello-world-1.2.war C:\\Users\\prasanth.pamula\\Downloads\\apache-tomcat-8.5.38\\webapps\\'''
    }
 }
 
