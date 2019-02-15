@@ -3,7 +3,7 @@ node {
    def mvnHome
    stage('Code-Checkout') { // for display purposes
       //Checkout code from a GitHub repository
-      git 'https://github.com/ybmadhu/spring3-mvc-maven-xml-hello-world.git'
+      git 'https://github.com/sampathka/Hello-World.git'
       // Getting maven installation location and letting know to jenkins 
       // **       in the global configuration.           
       mvnHome = tool 'Maven'
@@ -20,7 +20,7 @@ node {
    
    stage ('artifact-deploy-to-tc-instance'){
    echo 'deployment started'
-      bat '''copy C:\\Users\\prasanth.pamula\\.jenkins\\workspace\\hello-world\\target\\*.war C:\\Users\\prasanth.pamula\\Downloads\\apache-tomcat-8.5.38\\webapps\\'''
+      //sh label: '', script: 'cp /root/MavenHelloWorldProject/target/*.war /opt/tomcat/apache-tomcat-8.5.38/webapps/'
    }
 }
 
