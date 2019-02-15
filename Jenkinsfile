@@ -20,7 +20,7 @@ node {
    
    stage ('artifact-deploy-to-tc-instance'){
    echo 'deployment started'
-      //sh label: '', script: 'cp /root/MavenHelloWorldProject/target/*.war /opt/tomcat/apache-tomcat-8.5.38/webapps/'
+      sh label: '', script: 'cp /var/lib/jenkins/workspace/Jenkins-pipeline/target/*.war /opt/tomcat/apache-tomcat-8.5.38/webapps/'
    }
 }
 
